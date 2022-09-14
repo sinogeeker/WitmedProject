@@ -30,6 +30,7 @@
 		<lombok.version>1.18.24</lombok.version>
 		<mapstruct-processor.version>1.5.2.Final</mapstruct-processor.version>
 		<hutool-all.version>5.8.5</hutool-all.version>
+		<java-jwt.version>4.0.0</java-jwt.version>
 	</properties>
 
 	<dependencies>

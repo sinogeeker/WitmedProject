@@ -2,8 +2,11 @@ package com.whackon.witmed.base.pojo.vo;
 
 import com.whackon.witmed.base.pojo.enums.ResponseEnum;
 import lombok.Data;
+import org.springframework.validation.FieldError;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <b>系统响应视图信息</b>
@@ -60,6 +63,13 @@ public class ResponseVO<E> implements Serializable {
 	 */
 	public static ResponseVO createFailureResponseVO(String errorMessage) {
 		return new ResponseVO(ResponseEnum.RESPONSE_FAILURE, errorMessage, new String(""));
+	}
+
+	public static ResponseVO createFailureResponseVO(List<FieldError> fieldErrorList) {
+		List<String> errorMessagesList = new ArrayList<String>();
+		// 使用 JDK 8 所提供的循环方式依次从 fieldErrorList 中提取数据，存入 errorMessagesList
+		fieldErrorList.forEach(fieldError -> errorMessagesList.add(fieldError.getDefaultMessage()));
+		return new ResponseVO(ResponseEnum.RESPONSE_FAILURE, "校验失败", errorMessagesList);
 	}
 
 	/**

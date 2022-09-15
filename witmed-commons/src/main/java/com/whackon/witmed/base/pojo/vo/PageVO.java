@@ -1,6 +1,6 @@
 package com.whackon.witmed.base.pojo.vo;
 
-import com.whackon.witmed.base.util.BaseConstants;
+import com.whackon.witmed.base.util.SystemConstants;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -30,13 +30,13 @@ public class PageVO<E extends BaseVO> implements Serializable {
 			this.pageNum = pageNum;
 		} else {
 			// 所给定的当前页码无效，则使用默认值
-			this.pageNum = BaseConstants.PAGE_NUM;
+			this.pageNum = SystemConstants.PAGE_NUM;
 		}
 
 		if (pageSize != null && pageSize > 0) {
 			this.pageSize = pageSize;
 		} else {
-			this.pageSize = BaseConstants.PAGE_SIZE;
+			this.pageSize = SystemConstants.PAGE_SIZE;
 		}
 	}
 }

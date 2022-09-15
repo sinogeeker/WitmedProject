@@ -1,6 +1,5 @@
 package com.whackon.witmed.base.pojo.enums;
 
-import com.whackon.witmed.base.util.BaseConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,7 +20,7 @@ class BaseEnumConstants {
 
 	static {
 		try {
-			props.load(BaseConstants.class.getClassLoader().getResourceAsStream("props/base/enums.properties"));
+			props.load(BaseEnumConstants.class.getClassLoader().getResourceAsStream("props/base/enums.properties"));
 		} catch (IOException e) {
 			// 将产生的异常信息记录到日志中
 			logger.error(e.getMessage() + " : " + new Date(), e);

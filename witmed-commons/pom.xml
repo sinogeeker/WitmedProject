@@ -30,6 +30,13 @@
 		</dependency>
 		<!-- 配置依赖：Spring Cloud Starter OpenFeign [END] -->
 
+		<!-- 配置依赖：Spring Cloud Starter Loadbalancer [BEGIN] -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
+		</dependency>
+		<!-- 配置依赖：Spring Cloud Starter Loadbalancer [END] -->
+
 		<!-- 配置依赖：Spring Boot Starter Data Redis [BEGIN] -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -45,11 +52,19 @@
 		</dependency>
 		<!-- 配置依赖：Project Lombok [END] -->
 
+		<!-- 配置依赖：MapStruct Core [BEGIN] -->
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
+		<!-- 配置依赖：MapStruct Core [END] -->
+
 		<!-- 配置依赖：MapStruct Processor [BEGIN] -->
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct-processor</artifactId>
-			<version>${mapstruct-processor.version}</version>
+			<version>${mapstruct.version}</version>
 		</dependency>
 		<!-- 配置依赖：MapStruct Processor [END] -->
 
